@@ -1,0 +1,83 @@
+{
+  "scope": "federation",
+  "layer_id": "sci-economic",
+  "visibility": "public",
+  "target_environments": [
+    "pro"
+  ],
+  "intranet_topology": {
+    "base_domain": "sci-economic.knowledge.local",
+    "node_host": "sci-economic.knowledge.local",
+    "port": 8727,
+    "promotion_pipeline": "staged",
+    "visibility": "public",
+    "environment_promotion_order": [
+      "dev",
+      "tst",
+      "pre",
+      "pro"
+    ],
+    "environment_subdomains": {
+      "dev": "https://dev.sci-economic.knowledge.local",
+      "tst": "https://tst.sci-economic.knowledge.local",
+      "pre": "https://pre.sci-economic.knowledge.local",
+      "pro": "https://sci-economic.knowledge.local"
+    },
+    "local_environment_urls": {
+      "dev": "http://127.0.0.1:8727/?env=dev",
+      "tst": "http://127.0.0.1:8727/?env=tst",
+      "pre": "http://127.0.0.1:8727/?env=pre",
+      "pro": "http://127.0.0.1:8727/?env=pro"
+    },
+    "environment_reachability": {
+      "dev": "local-loopback-only",
+      "tst": "local-preview-unprovisioned-intranet",
+      "pre": "local-preview-unprovisioned-intranet",
+      "pro": "public-remote-live"
+    },
+    "remote_production_url": "https://github.com/mtwuser/sci-economic.git",
+    "active_subdomain_url": "https://dev.sci-economic.knowledge.local",
+    "localhost_url": "http://127.0.0.1:8727/?env=dev",
+    "local_subdomain_host": "dev.sci-economic.localhost",
+    "local_subdomain_url": "http://dev.sci-economic.localhost:8727/?env=dev",
+    "local_subdomain_dashboard_url": "http://dev.sci-economic.localhost:8727/dashboard",
+    "local_subdomain_urls": {
+      "dev": "http://dev.sci-economic.localhost:8727/?env=dev",
+      "tst": "http://tst.sci-economic.localhost:8727/?env=tst",
+      "pre": "http://pre.sci-economic.localhost:8727/?env=pre",
+      "pro": "http://sci-economic.localhost:8727/?env=pro"
+    },
+    "domain_governance": {
+      "governing_root_id": "sci-economic",
+      "canonical_domain": "",
+      "developer_domain": "",
+      "intranet_zone": "",
+      "local_dev_zone": "sci-economic.localhost",
+      "dns_publication": "public-authoritative",
+      "dns_authority": {
+        "governed_by": "sci-economic",
+        "delegated_operator_layer": "sci-economic",
+        "required_role": "owner",
+        "provider": "google-cloud-dns"
+      }
+    }
+  },
+  "mounted_layers": [],
+  "fleet_plugin_inventory": [
+    {
+      "workspace_id": "sci-economic",
+      "workspace_path": ".",
+      "plugin_id": "knowledge-stewardship-portal",
+      "status": "healthy",
+      "environment": "dev",
+      "daemon_active": false,
+      "localhost_url": "http://dev.sci-economic.localhost:8727"
+    }
+  ],
+  "deployment_target": {
+    "provider": "local-sovereign",
+    "environment": "dev",
+    "stage": "local-loopback-w3c",
+    "iac_manifest": "none"
+  }
+}

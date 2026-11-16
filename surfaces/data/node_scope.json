@@ -1,0 +1,184 @@
+{
+  "scope": "node",
+  "layer_id": "sci-economic",
+  "target_environments": [
+    "dev"
+  ],
+  "representation_context": {
+    "view_archetype": "knowledge-stewardship-portal",
+    "active_templates": [
+      "universal-base",
+      "science-base",
+      "scientific-methodology",
+      "knowledge-stewardship-portal",
+      "sci-economic"
+    ],
+    "enabled_modules": [
+      "spatial_atlas",
+      "data_pipeline",
+      "crud",
+      "vault",
+      "node_mesh",
+      "tool_stack"
+    ],
+    "public_node_identity": {
+      "node_id": "sci-economic",
+      "display_name": "Quantitative Economics, Portfolio Optimization & Risk Laws Corpus (sci-economic)",
+      "canonical_domain": "sci-economic.knowledge.local",
+      "public_url": "https://github.com/mtwuser/sci-economic.git",
+      "governing_root_id": "sci-economic",
+      "root_0_public_approved": true,
+      "bridge_mode": "canonical-public-knowledge",
+      "attestation_digest": "99f604079e554bec",
+      "recognizable_in_network": true
+    },
+    "delivery_channel": {
+      "protocol": "python314-native-asgi",
+      "zones": [
+        "Z1",
+        "Z2",
+        "Z3",
+        "Z4"
+      ],
+      "tier": "T1",
+      "latency_budget_ms": 200,
+      "http_poll_stop_status": 286
+    },
+    "runtime_telemetry": {
+      "regime": "OPTIMAL",
+      "health_score": 1.0,
+      "telemetry_sink": ".agents/telemetry",
+      "ledger_bridge": "WORKTASK.md"
+    },
+    "security_posture": {
+      "contract_rev": "zcg-security-posture-v1",
+      "score": 100,
+      "grade": "HARDENED",
+      "checks": {
+        "gitignore_runtime_hygiene": true,
+        "skill_supply_chain_trust": true,
+        "egress_and_airgap_confinement": true,
+        "surface_ring_governance": true,
+        "overlay_integrity": true
+      },
+      "recommendations": []
+    },
+    "dual_world_contract": {
+      "common_base_plugin": "knowledge-stewardship-portal",
+      "use_case_overlay": "knowledge-stewardship-portal",
+      "enterprise_scale": null
+    },
+    "modular_workbench": {
+      "dashboard_id": "knowledge-stewardship-portal",
+      "panel_title": "Epistemic Corpus & Data Pipeline — Capabilities (:8720)",
+      "mode": "knowledge-stewardship-portal",
+      "enabled_modules": [
+        "spatial_atlas",
+        "data_pipeline",
+        "crud",
+        "vault",
+        "node_mesh",
+        "tool_stack"
+      ],
+      "modules": [
+        {
+          "module_id": "spatial_atlas",
+          "title": "Zone.Z4 2D/3D Spatial Atlas",
+          "endpoint": "/api/modules/spatial-atlas",
+          "actions": [
+            "inspect-atlas",
+            "inspect-scene"
+          ]
+        },
+        {
+          "module_id": "data_pipeline",
+          "title": "Data Pipeline (CDC/CVS)",
+          "endpoint": "/api/modules/data-pipeline",
+          "actions": [
+            "inspect-pipeline",
+            "ingest-batch"
+          ]
+        },
+        {
+          "module_id": "crud",
+          "title": "Declarative CRUD Collection",
+          "endpoint": "/api/modules/crud",
+          "actions": [
+            "view-cards",
+            "view-list",
+            "view-table",
+            "create-record"
+          ]
+        },
+        {
+          "module_id": "vault",
+          "title": "Content-Addressed Vault",
+          "endpoint": "/api/modules/vault",
+          "actions": [
+            "list-files",
+            "upload-sample"
+          ]
+        },
+        {
+          "module_id": "node_mesh",
+          "title": "1-Hop & Cloud Mesh",
+          "endpoint": "/api/modules/node-mesh",
+          "actions": [
+            "inspect-mesh"
+          ]
+        },
+        {
+          "module_id": "tool_stack",
+          "title": "Isolated Tool Stack",
+          "endpoint": "/api/tools",
+          "actions": [
+            "list-tools",
+            "export-sarif",
+            "evaluate-decision"
+          ]
+        }
+      ]
+    },
+    "workstation_config": null,
+    "academic_study_state": null,
+    "personal_work_state": null
+  },
+  "own_node_ledger": {
+    "trackers": {
+      "WORKROAD.md": {
+        "exists": false,
+        "open": 0,
+        "in_progress": 0,
+        "completed": 0
+      },
+      "WORKTASK.md": {
+        "exists": true,
+        "open": 1,
+        "in_progress": 0,
+        "completed": 1
+      },
+      "WORKVALI.md": {
+        "exists": false,
+        "open": 0,
+        "in_progress": 0,
+        "completed": 0
+      },
+      "BACKLOG.md": {
+        "exists": true,
+        "open": 0,
+        "in_progress": 0,
+        "completed": 0
+      }
+    },
+    "total_open_items": 1,
+    "total_in_progress_items": 0,
+    "total_completed_items": 1,
+    "active_node_tasks": [
+      "Complete `Layer Setup Blueprint` in `README.md` and run Kickoff Prompt."
+    ]
+  },
+  "knowledge_docs": [
+    "docs/README.md",
+    "docs/architecture/01_portfolio_risk_kelly_and_rebalance_laws.md"
+  ]
+}

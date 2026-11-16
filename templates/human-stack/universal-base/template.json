@@ -1,0 +1,13 @@
+{
+  "schema_version": "zcg-template-v1",
+  "name": "universal-base",
+  "kind": "human-stack",
+  "stack_group": "human-stack",
+  "extends": null,
+  "target_role": "workstation",
+  "description": "Universal Zero-Cloud Antigravity cognitive, modular, verification, and commit baseline.",
+  "recommended_surface_bindings": [],
+  "reconciled_upstream_sha256": {
+    "universal-base.md": "fdc43d1fbbd4184f082ffbfa6c9a2bab5eec20548d6e298d1815f24d11790a32"
+  }
+}

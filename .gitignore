@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+logs/
+.zcg/
+.agents/runtime/
+.agents/telemetry/
+.agents/SESSION.md

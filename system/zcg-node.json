@@ -1,0 +1,119 @@
+{
+  "mounted_layers_dir": "layers",
+  "mounted_layers": [],
+  "default_stack_templates": [
+    "science-base",
+    "scientific-methodology",
+    "knowledge-stewardship-portal",
+    "sci-economic"
+  ],
+  "baseline_guardrails": [],
+  "surface_bindings": [
+    {
+      "binding_id": "sci-economic-surface-binding",
+      "description": "Quantitative Economics, Portfolio Optimization & Risk Laws Corpus (sci-economic)",
+      "mode": "authoritative",
+      "target_globs": [
+        "*"
+      ],
+      "architectural_planes": [
+        "*"
+      ],
+      "scopes": [
+        "*"
+      ],
+      "traits": [
+        "*"
+      ],
+      "default_resolution": "L2",
+      "invariants": [
+        "Enforce sci-economic (context-stack) rules and canonical assets"
+      ],
+      "rule_files": [
+        "templates/sci-economic/rules/sci-economic.md"
+      ],
+      "canonical_templates": [
+        "templates/sci-economic/assets/canonical_snippet.md"
+      ],
+      "ephemeral_fork_policy": {
+        "bot_role": "sci-economic-guardian",
+        "trigger": "on_surface_match",
+        "model_tier": "inherit",
+        "access_mode": "strictly-read-only",
+        "mount_templates": [
+          "sci-economic"
+        ],
+        "resolution": "L2",
+        "ttl_seconds": 300,
+        "handback_contract": "4-channel-digest+rcap1"
+      }
+    }
+  ],
+  "environments": {
+    "dev": {
+      "description": "Local sci-economic workspace",
+      "access_mode": "read-write-local",
+      "default_guardrails": [
+        "Enforce sci-economic governance invariants"
+      ]
+    },
+    "tst": {
+      "description": "Integration & QA validation for sci-economic",
+      "access_mode": "read-and-test-trigger",
+      "default_guardrails": [
+        "Enforce sci-economic governance invariants"
+      ]
+    },
+    "pre": {
+      "description": "Pre-production staging audit for sci-economic",
+      "access_mode": "strictly-read-only",
+      "default_guardrails": [
+        "Enforce sci-economic governance invariants"
+      ]
+    },
+    "pro": {
+      "description": "Production governance enforcement for sci-economic",
+      "access_mode": "strictly-read-only-audited",
+      "default_guardrails": [
+        "Enforce sci-economic governance invariants"
+      ]
+    }
+  },
+  "federated_mcps": [],
+  "schema_version": "zcg-node-v1",
+  "layer_id": "sci-economic",
+  "layer_role": "knowledge",
+  "precedence": 20,
+  "description": "Quantitative Economics, Portfolio Optimization & Risk Laws Corpus (sci-economic)",
+  "entity_kind": "open-source",
+  "interaction_language": "es",
+  "upstream_layer": {
+    "layer_id": "mtwuser/zero-cloud-gravity",
+    "branch": "master",
+    "repository": "https://github.com/mtwuser/zero-cloud-gravity.git"
+  },
+  "governance_posture": "sovereign",
+  "cockpit_port": 8727,
+  "visibility": "public",
+  "stewardship_stage": "public-community",
+  "public_url": "https://github.com/mtwuser/sci-economic.git",
+  "canonical_authority_url": "https://github.com/consortium-sci/sci-economic.git",
+  "git_governance": {
+    "capsule_ref_namespace": "refs/zcg/capsules"
+  },
+  "network_egress_policy": {
+    "mode": "curated-allowlist",
+    "allowed_domains": [
+      "github.com",
+      "zerocloudgravity.org",
+      "doi.org",
+      "arxiv.org"
+    ]
+  },
+  "surface_access": {
+    "enabled": true,
+    "default_ring": "R0",
+    "protect_mutating_ops": true
+  },
+  "governing_root_id": "sci-economic"
+}

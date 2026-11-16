@@ -1,0 +1,48 @@
+{
+  "schema_version": "zcg-template-v1",
+  "template_id": "sci-economic",
+  "kind": "context-stack",
+  "target_role": "domain-policy",
+  "description": "Quantitative Economics, Portfolio Optimization & Risk Laws Corpus (sci-economic)",
+  "recommended_surface_bindings": [
+    {
+      "binding_id": "sci-economic-surface-binding",
+      "description": "Quantitative Economics, Portfolio Optimization & Risk Laws Corpus (sci-economic)",
+      "mode": "authoritative",
+      "target_globs": [
+        "*"
+      ],
+      "architectural_planes": [
+        "*"
+      ],
+      "scopes": [
+        "*"
+      ],
+      "traits": [
+        "*"
+      ],
+      "default_resolution": "L2",
+      "invariants": [
+        "Enforce sci-economic (context-stack) rules and canonical assets"
+      ],
+      "rule_files": [
+        "templates/sci-economic/rules/sci-economic.md"
+      ],
+      "canonical_templates": [
+        "templates/sci-economic/assets/canonical_snippet.md"
+      ],
+      "ephemeral_fork_policy": {
+        "bot_role": "sci-economic-guardian",
+        "trigger": "on_surface_match",
+        "model_tier": "inherit",
+        "access_mode": "strictly-read-only",
+        "mount_templates": [
+          "sci-economic"
+        ],
+        "resolution": "L2",
+        "ttl_seconds": 300,
+        "handback_contract": "4-channel-digest+rcap1"
+      }
+    }
+  ]
+}
