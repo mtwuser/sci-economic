@@ -1,6 +1,6 @@
 ---
 name: sci-economic-guide
-description: "Guide for sci-economic."
+description: "Orchestrate operational workflows inside sci-economic."
 ---
 
 # sci-economic Guide
