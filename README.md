@@ -1,34 +1,34 @@
-# sci-economic (`knowledge`, `precedence: 20`)
+# sci-economic — Sovereign Epistemic Knowledge Corpus (`v1.0.0`)
 
-## Layer Setup Blueprint (Epistemic Knowledge Atlas Node (gov-*, sci-*, geo-*, org-*))
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](VERSION)
+[![ZeroCloudGravity](https://img.shields.io/badge/ZeroCloudGravity-v1.2.0-0F766E.svg)](https://github.com/mtwuser/zero-cloud-gravity)
+[![Epistemic Grade](https://img.shields.io/badge/epistemic_grade-E2-1D4ED8.svg)](docs/architecture/01_portfolio_risk_kelly_and_rebalance_laws.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-- **Node ID & Role**: `sci-economic` (`knowledge`, `precedence: 20`)
-- **1-Hop Upstream Parent**: `mtwuser/zero-cloud-gravity`
-- **Active Template Packs**: `science-base`, `scientific-methodology`, `knowledge-stewardship-portal`, `sci-economic`
-- **Branch & Promotion Pipeline (`promotion_pipeline`)**: `staged` (`['dev', 'tst', 'pre', 'pro']` — `master` = enacted `pro` baseline + optional `context_branches` (`specialty/*`, `hat/*`, `machine/*`); work promotes via `feature/*` or `directive/*` (`dev`) -> `env/tst` -> `env/pre` -> `master` (`pro`))
-- **Human-Stack Profile (Optional)**: [Optional: leave blank for default, or compose Human-Stack facets: domain-<area>:M1..M4 | bridge-* | soft-* | hat-*]
-- **Interaction Language (`--lang`)**: `es` (`Spanish (es)` — repo artifacts 100% English)
-- **Mission, Scope & Core Invariants**: [Fill: Epistemic domain, E3..E0 credibility invariants, and citation_receipt scope]
-- **Downstream Topology (Next Tier)**: [Fill: Consumer nodes mounting this knowledge corpus]
-- **Authorized Layer Owner (`set-authority`)**: [Fill: Role title & owner email]
+> **Quantitative Economics, Portfolio Risk, Fractional Kelly Sizing & Cashflow Invariants** (`layer_role: knowledge`, `precedence: 20`, `stewardship_stage: public-community`).
 
-## Initial Chat Kickoff Prompt (4-Phase Customizable Progression)
+## 1. Epistemic Corpus Index (`1:1:1` Progressive Disclosure)
 
-```text
-/sopen — Configure Zero-Cloud Node 'sci-economic' (Epistemic Knowledge Atlas Node (gov-*, sci-*, geo-*, org-*), lang=es):
-- Mission & Scope: [Customize: [Fill: Epistemic domain, E3..E0 credibility invariants, and citation_receipt scope]]
-- Authorized Owner: [Customize: Role title & owner@domain]
-Phase A (Setup & Purpose Alignment): Write the Mission & Authorized Owner above into README.md (replacing all [Fill: ...] placeholders) and system/zcg-node.json (zcg set-authority). Tailor templates/sci-economic/rules/sci-economic.md with our mission and invariants without duplicating upstream rules, then run make sync && make diff and initialize WORKROAD.md / WORKTASK.md.
-Phase B (Epistemic Knowledge & Spec Atlas): Structure docs/{reference,architecture,guides}/ (< 465 lines) with E3..E0 epistemic grades and citation_receipt anchors.
-Phase C (Daily Bounded-Lot Execution & Verification): Claim work via make task TASK="<id>", execute 1 bounded lot per turn (3-5 files) with active-layer verification, and checkpoint via /continue.
-Phase D (Upward Enrichment & Sync Reconciliation): Reconcile upstream updates via make sync STRATEGY=reconcile (make upstream-diff), verify make env-gate ENV=tst|pre|pro, and promote reusable rules upward via /enrich and make promote before /sclose. Finally, mark '- [x] Complete `Layer Setup Blueprint`' in WORKTASK.md and run make activate-plugin to unlock the configured Node Workspace web UI.
+All sections expose deterministic `rcap1` (`L0 -> L3`) capsules and cryptographic `citation_receipt` anchors (`<layer>::<file>#<slug>@<sha256_16>:<E3..E0>`):
+
+| Tier | Credibility | Document |
+| :--- | :--- | :--- |
+| **Spec / Law** | `E2` | [`docs/architecture/01_portfolio_risk_kelly_and_rebalance_laws.md`](docs/architecture/01_portfolio_risk_kelly_and_rebalance_laws.md) |
+
+## 2. Mounting & Querying from Any `ZeroCloudGravity` Node
+
+Link or mount this corpus into a personal (`<persona>-profile`, `<persona>-wallet`), research, or enterprise node without cloud dependencies:
+
+```bash
+zcg link <your-node-dir> --target https://github.com/mtwuser/sci-economic.git --relation knowledge-feed
+zcg consult-layer <your-node-dir> --layer sci-economic --query "<topic>" --tier flash
 ```
 
-## Upstream Upgrade & Version Reconciliation Prompt (4-Step Guided Flow)
+## 3. Layer Setup Blueprint (`State U2: configured`)
 
-```text
-Step 1 (Topology & Horizon Audit): /sopen — Run make status (inspect sync_topology 4-stage DAG & promotion_pipeline), make horizon, and make upstream-diff against `mtwuser/zero-cloud-gravity`.
-Step 2 (Zero-Loss Node & Schema Reconciliation): Run make sync STRATEGY=reconcile (or STRATEGY=merge) to upgrade Makefile, system/zcg-node.json, and inherited templates while preserving sovereign rules in templates/sci-economic/rules/sci-economic.md.
-Step 3 (Selective Stack & Node Plugin Review): Evaluate whether any newly available context-stack, tool-stack, or plugin-stack pack adds genuine value without saturating context, then verify make diff (0 drift).
-Step 4 (Environment / Mastery Gate & Closure): Validate make env-gate ENV=pro (or ENV=tst|pre|pro on staged enterprise nodes) and close via /sclose.
-```
+- **Node ID & Role**: `sci-economic` (`knowledge`, `precedence: 20`, `surface_veracity_mode: full-open-source`)
+- **1-Hop Upstream Engine**: [`mtwuser/zero-cloud-gravity`](https://github.com/mtwuser/zero-cloud-gravity)
+- **Active Template Packs**: `science-base`, `scientific-methodology`, `sci-economic`, `knowledge-stewardship-portal`
+- **Mission, Scope & Core Invariants**: Quantitative economics & portfolio risk corpus (`E2`) governing double-entry accounting invariants, fractional Kelly sizing, drawdown cut-points, and cashflow bucket partitions.
+- **Downstream Topology**: Consumed read-only via `knowledge-feed` links or `layers/*` subtrees across personal `wallet`, corporate `finance-supply`, and academic nodes.
+- **Authorized Layer Steward**: `sci-economic Knowledge Steward <mtwuser@users.noreply.github.com>`

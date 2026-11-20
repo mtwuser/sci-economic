@@ -116,5 +116,5 @@
     "protect_mutating_ops": true
   },
   "governing_root_id": "sci-economic",
-  "engine_version": "1.1.0"
+  "engine_version": "1.2.0"
 }
